@@ -2,17 +2,6 @@ const books = [
   {
     number: "01",
     title:
-      "うつ休職から復職できた妻の話: 回復のきっかけは“リワーク”で教わった「優しさの優先順位」だった",
-    shortTitle: "うつ休職から復職できた妻の話",
-    description:
-      "休職から復職へ。そばで見守った夫婦の時間を通して、回復のきっかけと、自分を大切にするための考え方を綴った一冊です。",
-    image: "https://m.media-amazon.com/images/I/81qUvFmsiEL._CR0%2C0%2C0%2C130_.jpg",
-    href: "https://www.amazon.co.jp/dp/B0H2NMP3Q4",
-    theme: "life",
-  },
-  {
-    number: "02",
-    title:
       "看護師の在宅医療Webライター副業の始め方: 夜勤16時間vs在宅4時間どちらを選ぶ？専門知識と経験を活かせるタイパ最強副業",
     shortTitle: "看護師の在宅医療Webライター副業の始め方",
     description:
@@ -20,6 +9,17 @@ const books = [
     image: "https://m.media-amazon.com/images/I/81Rgq6sRRRL._SY522_.jpg",
     href: "https://www.amazon.co.jp/dp/B0GMWK2D5L",
     theme: "work",
+  },
+  {
+    number: "02",
+    title:
+      "うつ休職から復職できた妻の話: 回復のきっかけは“リワーク”で教わった「優しさの優先順位」だった",
+    shortTitle: "うつ休職から復職できた妻の話",
+    description:
+      "休職から復職へ。そばで見守った夫婦の時間を通して、回復のきっかけと、自分を大切にするための考え方を綴った一冊です。",
+    image: "https://m.media-amazon.com/images/I/81qUvFmsiEL._CR0%2C0%2C0%2C130_.jpg",
+    href: "https://www.amazon.co.jp/dp/B0H2NMP3Q4",
+    theme: "life",
   },
 ];
 
