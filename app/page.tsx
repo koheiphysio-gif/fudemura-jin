@@ -39,8 +39,8 @@ export default function Home() {
       <section className="intro" aria-label="書籍紹介">
         <p className="eyebrow">SELECTED WORKS</p>
         <p>
-          心と仕事のあいだにある迷いへ。<br />
-          いまの自分に寄り添うための、二冊です。
+          理学療法士としての医療知識を、マンガで分かりやすく紐解く。<br />
+          心と仕事の悩みに寄り添います。
         </p>
       </section>
 
