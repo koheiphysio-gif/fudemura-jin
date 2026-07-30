@@ -22,6 +22,8 @@
       /* ヘッダー画像の表示幅を、本文の最大幅（1100px）に揃える */
       .hero{height:clamp(280px,28vw,400px);background-size:min(1100px,100%) auto;background-position:center 45%}
       .hero:after{display:none}
+      /* 書影を隠さないよう、装飾用の大きな番号は表示しない */
+      .number{display:none}
       @media(max-width:700px){.hero{height:clamp(220px,55vw,300px);background-size:100% auto;background-position:center}}
     </style>
   </head>
