@@ -38,6 +38,22 @@
       .series-tag{display:inline-block;margin:0 0 10px;padding:5px 12px;border:1px solid currentColor;border-radius:99px;font-size:11px;font-weight:700;letter-spacing:.14em}
       .third .series-tag{color:#71577f}.fourth .series-tag{color:#386b69}
       @media(max-width:700px){.author-inner{grid-template-columns:1fr;justify-items:center;text-align:center;padding:64px 24px}.author-bio{margin-left:auto;margin-right:auto}}
+      /* 4コマストーリー紹介 */
+      .story{border-top:1px solid var(--line);background:#f2ede3}
+      .story-inner{max-width:1100px;margin:0 auto;padding:88px 28px;display:flex;flex-direction:column;align-items:center}
+      .story-header{text-align:center;max-width:640px;margin:0 auto 40px}
+      .story-header .eyebrow{color:var(--coral)}
+      .story-header h2{margin:14px 0 12px;font-family:Georgia,"Yu Mincho",serif;font-size:clamp(26px,3.6vw,40px);font-weight:400;letter-spacing:.03em;line-height:1.35}
+      .story-subtitle{margin:0;font-size:15px;line-height:1.9;letter-spacing:.04em;color:rgba(29,37,40,.82)}
+      .story-card{max-width:min(100%,600px);width:100%;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(29,37,40,.12),0 2px 6px rgba(29,37,40,.06);transition:transform .3s ease,box-shadow .3s ease}
+      .story-card:hover{transform:translateY(-4px);box-shadow:0 24px 48px rgba(29,37,40,.16),0 4px 10px rgba(29,37,40,.08)}
+      .story-img{display:block;width:100%;height:auto}
+      .story-caption{padding:20px 24px;font-size:13px;line-height:1.7;letter-spacing:.03em;color:rgba(29,37,40,.85);text-align:center;border-top:1px solid rgba(29,37,40,.08);background:#faf8f5}
+      .story-catchphrase{margin:0 0 10px;font-weight:700;font-size:14px;color:var(--ink)}
+      .story-credit{margin:0;font-size:12px;color:var(--sage);display:flex;align-items:center;justify-content:center;gap:6px}
+      .story-credit a{color:var(--ink);font-weight:700;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;transition:color .2s ease}
+      .story-credit a:hover{color:var(--coral)}
+      @media(max-width:700px){.story-inner{padding:64px 20px}.story-header{margin-bottom:28px}.story-subtitle{font-size:14px;line-height:1.8}.story-caption{padding:16px 18px}.story-catchphrase{font-size:13px}}
     </style>
   </head>
   <body>
@@ -53,6 +69,25 @@
             <p class="author-role">理学療法士 × Webディレクター・ライター × Kindle作家</p>
             <p class="author-bio">2004年より理学療法士として、主に介護老人保健施設で高齢者リハビリテーションの現場に立ち続けてきました。臨床の最前線で医療従事者の長時間労働や将来への不安を肌で感じる中で、「場所と時間に縛られない働き方」を模索するように。2021年からは副業としてWebライター・ディレクター業をスタートし、朝4時起床、出勤前の時間を活用して活動しています。医療現場で培った「観察眼」と最新のAI技術を掛け合わせることで、本業と両立しながら収益化に成功しました。2026年2月からはKindle作家としても活動を開始。マンガという形式を通じて、医療・介護の現場でしか見えない「命と向き合う人の物語」や、自分らしい生き方・働き方のヒントを届けています。</p>
             <a class="note-link" href="https://note.com/ripe_dove7169" target="_blank" rel="noreferrer">noteをフォローする ↗</a>
+          </div>
+        </div>
+      </section>
+      <section class="story" id="story" aria-labelledby="story-title">
+        <div class="story-inner">
+          <div class="story-header">
+            <p class="eyebrow">MY STORY</p>
+            <h2 id="story-title">その知識、誰かの宝になる</h2>
+            <p class="story-subtitle">理学療法士としての現場の気づきから、Webライター副業、そしてマンガ・Kindle出版へ。<br>専門知識を分かりやすく届け、誰かの役に立つ資産に変えるまでの歩みです。</p>
+          </div>
+          <div class="story-card">
+            <picture>
+              <source srcset="assets/story-manga.webp" type="image/webp">
+              <img class="story-img" src="assets/story-manga.jpg" width="682" height="1024" loading="lazy" decoding="async" alt="4コマ漫画『その知識、誰かの宝になる』。理学療法士としての気づきからWebライター副業、マンガ化への挑戦、Kindle出版までの軌跡">
+            </picture>
+            <div class="story-caption">
+              <p class="story-catchphrase">「知識は、使ってこそ価値になる。今日もコツコツ、未来の誰かのために。」</p>
+              <p class="story-credit">マンガ制作：<a href="https://x.com/tama_ai_2024" target="_blank" rel="noopener noreferrer">@tama_ai_2024 <span aria-hidden="true">↗</span></a></p>
+            </div>
           </div>
         </div>
       </section>
