@@ -68,9 +68,10 @@ a { color: inherit; }
 .bestseller strong { display: block; font-size: 16px; }
 .bestseller span { display: block; margin-top: 3px; font-size: 12px; }
 .book-links { display: flex; flex-wrap: wrap; gap: 22px; align-items: center; }
-.amazon-link, .note-link { display: inline-flex; align-items: center; gap: 18px; padding-bottom: 10px; border-bottom: 1px solid var(--ink); font-size: 14px; font-weight: 700; letter-spacing: .08em; text-decoration: none; transition: color .2s ease, gap .2s ease; }
+.amazon-link, .note-link, .x-link { display: inline-flex; align-items: center; gap: 18px; padding-bottom: 10px; border-bottom: 1px solid var(--ink); font-size: 14px; font-weight: 700; letter-spacing: .08em; text-decoration: none; transition: color .2s ease, gap .2s ease; }
 .amazon-link:hover, .amazon-link:focus-visible { color: var(--coral); gap: 25px; outline: none; }
 .note-link:hover, .note-link:focus-visible { color: #71577f; gap: 25px; outline: none; }
+.x-link:hover, .x-link:focus-visible { color: var(--coral); gap: 25px; outline: none; }
 
 /* 著者紹介 */
 .author { border-top: 1px solid var(--line); }
@@ -80,6 +81,7 @@ a { color: inherit; }
 .author-name { margin: 14px 0 4px; font-family: Georgia, "Yu Mincho", serif; font-size: clamp(24px, 3vw, 32px); font-weight: 400; letter-spacing: .03em; }
 .author-role { margin: 0 0 20px; font-size: 14px; font-weight: 700; letter-spacing: .06em; color: var(--sage); }
 .author-bio { max-width: 640px; margin: 0 0 26px; font-size: 15px; line-height: 2; letter-spacing: .04em; }
+.author-links { display: flex; flex-wrap: wrap; gap: 22px; align-items: center; }
 
 /* 4コマストーリー紹介 */
 .story { border-top: 1px solid var(--line); background: #f2ede3; }
@@ -107,6 +109,7 @@ footer p { margin: 0; }
   .intro { padding: 78px 24px; }
   .author-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; padding: 64px 24px; }
   .author-bio { margin-left: auto; margin-right: auto; }
+  .author-links { justify-content: center; }
   .story-inner { padding: 64px 20px; }
   .story-header { margin-bottom: 28px; }
   .story-subtitle { font-size: 14px; line-height: 1.8; }

@@ -36,9 +36,12 @@
       .author-name{margin:14px 0 4px;font-family:Georgia,"Yu Mincho",serif;font-size:clamp(24px,3vw,32px);font-weight:400;letter-spacing:.03em}
       .author-role{margin:0 0 20px;font-size:14px;font-weight:700;letter-spacing:.06em;color:var(--sage)}
       .author-bio{max-width:640px;margin:0 0 26px;font-size:15px;line-height:2;letter-spacing:.04em}
+      .author-links{display:flex;flex-wrap:wrap;gap:22px;align-items:center}
+      .x-link{display:inline-flex;gap:18px;padding-bottom:10px;border-bottom:1px solid var(--ink);font-size:14px;font-weight:700;letter-spacing:.08em;text-decoration:none}
+      .x-link:hover{color:var(--coral)}
       .series-tag{display:inline-block;margin:0 0 10px;padding:5px 12px;border:1px solid currentColor;border-radius:99px;font-size:11px;font-weight:700;letter-spacing:.14em}
       .third .series-tag{color:#71577f}.fourth .series-tag{color:#386b69}.fifth .series-tag{color:#8a5a2b}
-      @media(max-width:700px){.author-inner{grid-template-columns:1fr;justify-items:center;text-align:center;padding:64px 24px}.author-bio{margin-left:auto;margin-right:auto}}
+      @media(max-width:700px){.author-inner{grid-template-columns:1fr;justify-items:center;text-align:center;padding:64px 24px}.author-bio{margin-left:auto;margin-right:auto}.author-links{justify-content:center}}
       /* 4コマストーリー紹介 */
       .story{border-top:1px solid var(--line);background:#f2ede3}
       .story-inner{max-width:1100px;margin:0 auto;padding:88px 28px;display:flex;flex-direction:column;align-items:center}
@@ -69,7 +72,7 @@
             <p class="author-name">筆村ジン</p>
             <p class="author-role">理学療法士 × Webディレクター・ライター × Kindle作家</p>
             <p class="author-bio">2004年より理学療法士として、主に介護老人保健施設で高齢者リハビリテーションの現場に立ち続けてきました。臨床の最前線で医療従事者の長時間労働や将来への不安を肌で感じる中で、「場所と時間に縛られない働き方」を模索するように。2021年からは副業としてWebライター・ディレクター業をスタートし、朝4時起床、出勤前の時間を活用して活動しています。医療現場で培った「観察眼」と最新のAI技術を掛け合わせることで、本業と両立しながら収益化に成功しました。2026年2月からはKindle作家としても活動を開始。マンガという形式を通じて、医療・介護の現場でしか見えない「命と向き合う人の物語」や、自分らしい生き方・働き方のヒントを届けています。</p>
-            <a class="note-link" href="https://note.com/ripe_dove7169" target="_blank" rel="noreferrer">noteをフォローする ↗</a>
+            <div class="author-links"><a class="note-link" href="https://note.com/ripe_dove7169" target="_blank" rel="noreferrer">noteをフォローする ↗</a><a class="x-link" href="https://x.com/fudemura_ai" target="_blank" rel="noreferrer">Xをフォローする ↗</a></div>
           </div>
         </div>
       </section>

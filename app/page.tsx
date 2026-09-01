@@ -109,14 +109,24 @@ export default function Home() {
             <p className="author-bio">
               2004年より理学療法士として、主に介護老人保健施設で高齢者リハビリテーションの現場に立ち続けてきました。臨床の最前線で医療従事者の長時間労働や将来への不安を肌で感じる中で、「場所と時間に縛られない働き方」を模索するように。2021年からは副業としてWebライター・ディレクター業をスタートし、朝4時起床、出勤前の時間を活用して活動しています。医療現場で培った「観察眼」と最新のAI技術を掛け合わせることで、本業と両立しながら収益化に成功しました。2026年2月からはKindle作家としても活動を開始。マンガという形式を通じて、医療・介護の現場でしか見えない「命と向き合う人の物語」や、自分らしい生き方・働き方のヒントを届けています。
             </p>
-            <a
-              className="note-link"
-              href="https://note.com/ripe_dove7169"
-              target="_blank"
-              rel="noreferrer"
-            >
-              noteをフォローする <span aria-hidden="true">↗</span>
-            </a>
+            <div className="author-links">
+              <a
+                className="note-link"
+                href="https://note.com/ripe_dove7169"
+                target="_blank"
+                rel="noreferrer"
+              >
+                noteをフォローする <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                className="x-link"
+                href="https://x.com/fudemura_ai"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Xをフォローする <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
