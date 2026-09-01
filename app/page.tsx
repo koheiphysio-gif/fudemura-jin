@@ -27,7 +27,7 @@ const books = [
   },
   {
     number: "03",
-    seriesTag: "老健リハビリの現場 シリーズ 1／2",
+    seriesTag: "老健リハビリの現場 シリーズ 1／3",
     title: "マンガでわかる老健リハビリの現場（1） さよならの前に",
     shortTitle: "さよならの前に",
     description:
@@ -43,7 +43,7 @@ const books = [
   },
   {
     number: "04",
-    seriesTag: "老健リハビリの現場 シリーズ 2／2",
+    seriesTag: "老健リハビリの現場 シリーズ 2／3",
     title: "マンガでわかる老健リハビリの現場（2） 思い出は消えても",
     shortTitle: "思い出は消えても",
     description:
@@ -56,6 +56,18 @@ const books = [
     href: "https://www.amazon.co.jp/dp/B0GX2Y47G5",
     noteHref: "https://note.com/ripe_dove7169/n/n502c23104fb0?sub_rt=share_sb",
     theme: "fourth",
+  },
+  {
+    number: "05",
+    seriesTag: "老健リハビリの現場 シリーズ 3／3",
+    title:
+      "マンガでわかる老健リハビリの現場（3） もう一度、自分の足で ～骨折から、ひとり暮らしへ帰る～",
+    shortTitle: "もう一度、自分の足で",
+    description:
+      "テーマは「在宅復帰」。自宅で転倒し、大腿骨頸部骨折で歩けなくなった78歳・独居の芳江。老健「やすらぎの里」で理学療法士・作業療法士・ケアマネジャーとともに、ひとり暮らしの自宅へ帰る道のりを描きます。「誰が支えるか」ではなく「制度と職種がどう支えるか」を伝える、医療・介護ヒューマンドラマ第3巻。",
+    image: "/assets/rouken-rehab-vol-3-cover.webp",
+    href: "https://www.amazon.co.jp/dp/B0HGMCLFGJ",
+    theme: "fifth",
   },
 ];
 

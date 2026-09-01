@@ -47,6 +47,7 @@ a { color: inherit; }
 .book--work { background: #e7ebe4; }
 .book--third { background: #ebe5ef; }
 .book--fourth { background: #e6eceb; }
+.book--fifth { background: #f1e8dc; }
 .book__cover-wrap { position: relative; justify-self: center; width: min(100%, 300px); }
 .book__cover { position: relative; z-index: 1; display: block; width: 100%; box-shadow: 18px 22px 35px rgba(29,37,40,.2); transition: transform .28s ease, box-shadow .28s ease; }
 .book:hover .book__cover { transform: translateY(-6px) rotate(-1deg); box-shadow: 24px 30px 45px rgba(29,37,40,.25); }
@@ -54,13 +55,16 @@ a { color: inherit; }
 .book--work .book__label { color: #56725f; }
 .book--third .book__label { color: #71577f; }
 .book--fourth .book__label { color: #386b69; }
+.book--fifth .book__label { color: #8a5a2b; }
 .series-tag { display: inline-block; margin: 0 0 10px; padding: 5px 12px; border: 1px solid currentColor; border-radius: 99px; font-size: 11px; font-weight: 700; letter-spacing: .14em; }
 .book--third .series-tag { color: #71577f; }
 .book--fourth .series-tag { color: #386b69; }
+.book--fifth .series-tag { color: #8a5a2b; }
 .book h2 { margin: 0; font-family: Georgia, "Yu Mincho", serif; font-size: clamp(24px, 3vw, 39px); font-weight: 400; line-height: 1.45; letter-spacing: .025em; }
 .book__description { max-width: 510px; margin: 28px 0 24px; font-size: 15px; line-height: 2; letter-spacing: .04em; }
 .bestseller { max-width: 510px; margin: 0 0 36px; padding: 16px 18px; border-left: 3px solid #71577f; background: rgba(255,255,255,.42); font-size: 14px; line-height: 1.75; letter-spacing: .04em; }
 .book--fourth .bestseller { border-left-color: #386b69; }
+.book--fifth .bestseller { border-left-color: #8a5a2b; }
 .bestseller strong { display: block; font-size: 16px; }
 .bestseller span { display: block; margin-top: 3px; font-size: 12px; }
 .book-links { display: flex; flex-wrap: wrap; gap: 22px; align-items: center; }
