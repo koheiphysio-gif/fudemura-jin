@@ -67,6 +67,7 @@ const books = [
       "テーマは「在宅復帰」。自宅で転倒し、大腿骨頸部骨折で歩けなくなった78歳・独居の芳江。老健「やすらぎの里」で理学療法士・作業療法士・ケアマネジャーとともに、ひとり暮らしの自宅へ帰る道のりを描きます。「誰が支えるか」ではなく「制度と職種がどう支えるか」を伝える、医療・介護ヒューマンドラマ第3巻。",
     image: "/assets/rouken-rehab-vol-3-cover.webp",
     href: "https://www.amazon.co.jp/dp/B0HGMCLFGJ",
+    noteHref: "https://note.com/ripe_dove7169/n/n2fceeb91972d?sub_rt=share_sb",
     theme: "fifth",
   },
 ];
