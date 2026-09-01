@@ -157,14 +157,15 @@ export default function Home() {
                 「知識は、使ってこそ価値になる。今日もコツコツ、未来の誰かのために。」
               </p>
               <p className="story-credit">
-                マンガ制作：
+                この4コマは、
                 <a
                   href="https://x.com/tama_ai_2024"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  @tama_ai_2024 <span aria-hidden="true">↗</span>
+                  たまさん（@tama_ai_2024）<span aria-hidden="true">↗</span>
                 </a>
+                の「4コマ漫画100本ノック」企画で制作いただきました。
               </p>
             </div>
           </div>
