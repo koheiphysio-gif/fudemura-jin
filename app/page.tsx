@@ -23,6 +23,7 @@ const books = [
       "休職から復職へ。そばで見守った夫婦の時間を通して、回復のきっかけと、自分を大切にするための考え方を綴った一冊です。",
     image: "https://m.media-amazon.com/images/I/81qUvFmsiEL._CR0%2C0%2C0%2C130_.jpg",
     href: "https://www.amazon.co.jp/dp/B0H2NMP3Q4",
+    noteHref: "https://note.com/ripe_dove7169/n/n77671f7eb6a5?sub_rt=share_sb",
     theme: "life",
   },
   {
