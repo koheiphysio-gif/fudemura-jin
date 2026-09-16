@@ -75,6 +75,21 @@ const books = [
     noteHref: "https://note.com/ripe_dove7169/n/n2fceeb91972d?sub_rt=share_sb",
     theme: "fifth",
   },
+  {
+    number: "06",
+    seriesTag: "50代からのからだ塾",
+    title:
+      "50代からの椅子ひとつの体操: 一日5分・器具なし。「介護されない体」は椅子一つから作れる【マンガ＋図解】",
+    shortTitle: "50代からの椅子ひとつの体操",
+    description:
+      "駅の階段で息が上がる、立ち上がるときに「よいしょ」と声が出る。そんな日常の小さな変化に寄り添い、椅子ひとつで始められる体操を、マンガと図解でやさしく届ける一冊です。",
+    image: "/assets/chair-exercise-cover.jpg",
+    href: "https://amzn.asia/d/0d6n0rnt",
+    noteHref:
+      "https://note.com/ripe_dove7169/n/n1ff9fb33626f?sub_rt=share_sb",
+    videoHref: "https://www.youtube.com/shorts/Q7R96PUkF88",
+    theme: "sixth",
+  },
 ];
 
 export default function Home() {
@@ -218,6 +233,16 @@ export default function Home() {
                       rel="noreferrer"
                     >
                       noteで書籍紹介を読む <span aria-hidden="true">↗</span>
+                    </a>
+                  )}
+                  {book.videoHref && (
+                    <a
+                      className="video-link"
+                      href={book.videoHref}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      動く漫画で冒頭をみてみる <span aria-hidden="true">↗</span>
                     </a>
                   )}
                 </div>
