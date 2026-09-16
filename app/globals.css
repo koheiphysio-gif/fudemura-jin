@@ -68,6 +68,7 @@ a { color: inherit; }
 .bestseller { max-width: 510px; margin: 0 0 36px; padding: 16px 18px; border-left: 3px solid #71577f; background: rgba(255,255,255,.42); font-size: 14px; line-height: 1.75; letter-spacing: .04em; }
 .book--fourth .bestseller { border-left-color: #386b69; }
 .book--fifth .bestseller { border-left-color: #8a5a2b; }
+.book--sixth .bestseller { border-left-color: #b8422f; }
 .bestseller strong { display: block; font-size: 16px; }
 .bestseller span { display: block; margin-top: 3px; font-size: 12px; }
 .book-links { display: flex; flex-wrap: wrap; gap: 22px; align-items: center; }
