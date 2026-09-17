@@ -1,0 +1,23 @@
+/* 読む順番を揃えた書籍カード */
+.book-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card .book-meta { order: 1; }
+.book-card .series { order: 2; align-self: flex-start; }
+.book-card h3 { order: 3; margin-bottom: 14px; }
+.book-card .book-cover-link { order: 4; }
+.book-card .book-copy { display: none; }
+.book-card details { order: 5; display: block; margin: 17px 0 0; }
+.book-card details summary { display: none; }
+.book-card details p { margin: 0; color: rgba(35, 48, 51, .76); font-size: 13px; line-height: 1.85; letter-spacing: .035em; }
+.book-card .book-actions { order: 6; margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); }
+.book-card .rank { order: 7; margin: 22px 0 0; padding: 14px 0 0 13px; border-top: 1px solid var(--line); border-left: 2px solid var(--rust); }
+
+@media (max-width: 780px) {
+  .book-card h3 { margin-bottom: 11px; }
+  .book-card details p { font-size: 12px; }
+  .book-card .book-actions { margin-top: 17px; padding-top: 13px; }
+  .book-card .rank { margin-top: 17px; }
+}
