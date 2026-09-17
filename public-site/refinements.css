@@ -1,23 +1,668 @@
-/* 読む順番を揃えた書籍カード */
+/* ==========================================================================
+   筆村ジンの本棚 - シェルフ＆書籍カード洗練スタイル
+   参考: https://books.aoi-kurokawa.com/
+   ========================================================================== */
+
+/* ==========================================================================
+   ヒーローセクション：2段本棚（全6冊展示）
+   上段・下段それぞれの棚板（shelf-line）の上に本がピッタリ接地し、
+   ホバーで心地よく浮き上がる立体的なブックシェルフ
+   ========================================================================== */
+.hero-shelf {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 44px 32px 52px !important;
+  overflow: visible;
+}
+
+.hero-shelf-stage {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(26px, 3.8vw, 38px);
+  margin: auto 0;
+}
+
+.hero-shelf-tier {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-shelf-tier .hero-books {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(12px, 1.8vw, 22px);
+  width: 100%;
+  margin-bottom: 0 !important;
+  line-height: 0;
+}
+
+.hero-book {
+  display: block;
+  width: clamp(74px, 7.8vw, 108px);
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 8px 18px rgba(35, 48, 51, 0.22);
+  transform: none !important;
+  transform-origin: bottom center;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 0;
+  transition: transform .25s cubic-bezier(.2,.8,.3,1), box-shadow .25s ease;
+  flex-shrink: 0;
+}
+
+.hero-book img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  vertical-align: bottom;
+}
+
+/* 個別のズレ・傾きをリセットして棚板の上に直立 */
+.hero-book:nth-child(n) {
+  transform: none !important;
+}
+
+.hero-book:hover,
+.hero-book:focus-visible {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 16px 28px rgba(35, 48, 51, 0.32);
+  outline: none;
+}
+
+.hero-book:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: 3px;
+}
+
+/* 棚板：本の直下にピタッと配置し、左右に程よく張り出す木製シェルフ */
+.hero-shelf-tier .shelf-line {
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: min(100%, 400px);
+  height: 12px !important;
+  margin-top: 0 !important;
+  background: #5d4d3d !important;
+  border-radius: 2px 2px 0 0;
+  box-shadow: 0 8px 16px rgba(40, 30, 20, 0.18), 0 4px 0 rgba(70, 55, 42, 0.15);
+  flex-shrink: 0;
+}
+
+@media (max-width: 780px) {
+  .hero-shelf {
+    min-height: auto;
+    padding: 36px 16px 44px !important;
+    background: var(--mist);
+  }
+  .hero-shelf-stage {
+    gap: 22px;
+    max-width: 360px;
+  }
+  .hero-book {
+    width: clamp(68px, 21vw, 92px);
+  }
+  .hero-shelf-tier .shelf-line {
+    width: min(100%, 330px);
+    height: 10px !important;
+  }
+}
+
+/* 全体ラッパー & イントロ */
+.shelves-wrapper {
+  width: 100%;
+}
+
+.collection-intro {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 88px 34px 20px;
+}
+
+.collection-intro .section-heading {
+  margin-bottom: 0;
+}
+
+/* シェルフ共通構造 */
+.shelf {
+  padding: 76px 0 84px;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 76px;
+  transition: background-color .3s ease;
+}
+
+.shelf:nth-of-type(even) {
+  background: rgba(238, 233, 220, 0.35);
+}
+
+.shelf-inner {
+  width: min(1140px, calc(100% - 68px));
+  margin: 0 auto;
+}
+
+/* シェルフヘッダー */
+.shelf-header {
+  margin-bottom: 34px;
+}
+
+.shelf-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.shelf-number {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  color: var(--rust);
+}
+
+.shelf-category {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(35, 48, 51, .6);
+  letter-spacing: .08em;
+}
+
+.series-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--leaf);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.series-badge.badge-rust {
+  background: var(--rust);
+}
+
+.series-badge.badge-outline {
+  background: transparent;
+  color: var(--leaf);
+  border: 1px solid var(--leaf);
+}
+
+.shelf-title {
+  margin: 0 0 10px;
+  font-family: Georgia, "Yu Mincho", "Noto Serif JP", serif;
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: .04em;
+  color: var(--ink);
+}
+
+.shelf-desc {
+  margin: 0;
+  max-width: 760px;
+  color: rgba(35, 48, 51, .75);
+  font-size: 14.5px;
+  line-height: 1.85;
+  letter-spacing: .03em;
+}
+
+/* ==========================================================================
+   書籍カード共通
+   ========================================================================== */
 .book-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(35, 48, 51, 0.05);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  overflow: hidden;
+  scroll-margin-top: 88px;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(35, 48, 51, 0.11);
+  border-color: rgba(184, 91, 60, 0.35);
+}
+
+.book-card:target {
+  border-color: var(--rust);
+  box-shadow: 0 0 0 3px rgba(184, 91, 60, 0.22), 0 16px 36px rgba(35, 48, 51, 0.12);
+  animation: targetPulse 1.6s ease-out;
+}
+
+@keyframes targetPulse {
+  0% {
+    transform: translateY(-4px);
+    box-shadow: 0 0 0 4px rgba(184, 91, 60, 0.35), 0 16px 36px rgba(35, 48, 51, 0.14);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.book-cover-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.book-cover {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(8px 12px 14px rgba(35, 48, 51, 0.22));
+  transition: transform .28s cubic-bezier(0.2, 0.8, 0.2, 1), filter .28s ease;
+}
+
+.book-card:hover .book-cover {
+  transform: scale(1.03) translateY(-4px) rotate(-1deg);
+  filter: drop-shadow(10px 16px 18px rgba(35, 48, 51, 0.28));
+}
+
+/* 背景トーン（テーマ別） */
+.bg-tone-work { background: #dfe8df; }
+.bg-tone-life { background: #eee7ef; }
+.bg-tone-rehab-1 { background: #e9e2ed; }
+.bg-tone-rehab-2 { background: #e0ebea; }
+.bg-tone-rehab-3 { background: #eee4d6; }
+.bg-tone-health { background: #f3e8d5; }
+
+/* カード情報テキスト */
+.book-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.book-badge-meta {
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  color: var(--rust);
+}
+
+.book-card-title {
+  margin: 0 0 10px;
+  font-family: Georgia, "Yu Mincho", "Noto Serif JP", serif;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: .035em;
+  color: var(--ink);
+}
+
+.book-lead-text {
+  margin: 0 0 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.book-summary-text {
+  margin: 0 0 18px;
+  font-size: 13.5px;
+  color: rgba(35, 48, 51, .78);
+  line-height: 1.85;
+  letter-spacing: .025em;
+}
+
+/* 実績ランキング表示 */
+.rank-badge {
+  margin: 0 0 20px;
+  padding: 8px 12px 8px 14px;
+  border-left: 3px solid var(--rust);
+  background: rgba(184, 91, 60, 0.05);
+  border-radius: 0 8px 8px 0;
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: rgba(35, 48, 51, .82);
+}
+
+.rank-badge strong {
+  display: block;
+  font-size: 12.5px;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+/* アクションボタン（リンク） */
+.book-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(35, 48, 51, 0.08);
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-decoration: none;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.btn-pill.btn-primary {
+  background: var(--ink);
+  color: #fff;
+  border: 1px solid var(--ink);
+  box-shadow: 0 3px 8px rgba(35, 48, 51, 0.12);
+}
+
+.btn-pill.btn-primary:hover,
+.btn-pill.btn-primary:focus-visible {
+  background: var(--rust);
+  border-color: var(--rust);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(184, 91, 60, 0.25);
+  outline: none;
+}
+
+.btn-pill.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid rgba(35, 48, 51, 0.24);
+}
+
+.btn-pill.btn-secondary:hover,
+.btn-pill.btn-secondary:focus-visible {
+  background: rgba(35, 48, 51, 0.05);
+  border-color: var(--ink);
+  color: var(--rust);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.btn-pill span {
+  transition: transform .2s ease;
+}
+
+.btn-pill:hover span {
+  transform: translateX(2px);
+}
+
+/* ==========================================================================
+   パターンA：横型ワイドカード（SHELF 01, 02, 04）
+   ========================================================================== */
+.book-card-wide {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 36px;
+  padding: 28px;
+  align-items: stretch;
+  max-width: 960px;
+}
+
+.book-card-wide .book-cover-wrap {
+  height: 350px;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.book-card-wide .book-card-title {
+  font-size: clamp(21px, 2.3vw, 27px);
+}
+
+.book-card-wide .book-info {
+  justify-content: center;
+}
+
+/* ==========================================================================
+   パターンB：老健シリーズ 3カラムグリッド（SHELF 03）
+   ========================================================================== */
+.book-grid-trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.book-card-column {
   display: flex;
   flex-direction: column;
 }
 
-.book-card .book-meta { order: 1; }
-.book-card .series { order: 2; align-self: flex-start; }
-.book-card h3 { order: 3; margin-bottom: 14px; }
-.book-card .book-cover-link { order: 4; }
-.book-card .book-copy { display: none; }
-.book-card details { order: 5; display: block; margin: 17px 0 0; }
-.book-card details summary { display: none; }
-.book-card details p { margin: 0; color: rgba(35, 48, 51, .76); font-size: 13px; line-height: 1.85; letter-spacing: .035em; }
-.book-card .book-actions { order: 6; margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); }
-.book-card .rank { order: 7; margin: 22px 0 0; padding: 14px 0 0 13px; border-top: 1px solid var(--line); border-left: 2px solid var(--rust); }
+.book-card-column .book-cover-wrap {
+  height: 290px;
+  padding: 20px;
+  border-bottom: 1px solid rgba(35, 48, 51, 0.06);
+}
+
+.book-card-column .book-info {
+  padding: 24px 22px 22px;
+  flex-grow: 1;
+}
+
+.book-card-column .series-step {
+  display: inline-block;
+  align-self: flex-start;
+  margin: 0 0 8px;
+  padding: 3px 8px;
+  border: 1px solid rgba(96, 119, 100, 0.5);
+  border-radius: 4px;
+  color: #4f6354;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.book-card-column .book-card-title {
+  font-size: 19px;
+  min-height: 54px;
+  margin-bottom: 8px;
+}
+
+.book-card-column .book-summary-text {
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.book-card-column .rank-badge {
+  margin-bottom: 16px;
+  padding: 6px 10px 6px 12px;
+  font-size: 11px;
+}
+
+.book-card-column .rank-badge strong {
+  font-size: 11.5px;
+}
+
+/* ==========================================================================
+   からだ塾：シリーズ化プレビュー枠（SHELF 04）
+   ========================================================================== */
+.series-upcoming-box {
+  margin-top: 28px;
+  max-width: 960px;
+  padding: 24px 28px;
+  border: 1.5px dashed rgba(96, 119, 100, 0.45);
+  border-radius: 16px;
+  background: rgba(220, 229, 219, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.upcoming-badge {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--leaf);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(96, 119, 100, 0.25);
+}
+
+.upcoming-badge span:first-child {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  opacity: .9;
+}
+
+.upcoming-badge span:last-child {
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.upcoming-content {
+  flex-grow: 1;
+}
+
+.upcoming-title {
+  margin: 0 0 6px;
+  font-family: Georgia, "Yu Mincho", "Noto Serif JP", serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.upcoming-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.75;
+  color: rgba(35, 48, 51, .75);
+}
+
+/* ==========================================================================
+   レスポンシブ対応
+   ========================================================================== */
+@media (max-width: 1020px) {
+  .book-grid-trio {
+    gap: 18px;
+  }
+  .book-card-column .book-card-title {
+    font-size: 17.5px;
+    min-height: auto;
+  }
+  .book-card-wide {
+    grid-template-columns: 230px 1fr;
+    gap: 26px;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 860px) {
+  .book-grid-trio {
+    grid-template-columns: 1fr;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .book-card-column .book-cover-wrap {
+    height: 320px;
+  }
+}
 
 @media (max-width: 780px) {
-  .book-card h3 { margin-bottom: 11px; }
-  .book-card details p { font-size: 12px; }
-  .book-card .book-actions { margin-top: 17px; padding-top: 13px; }
-  .book-card .rank { margin-top: 17px; }
+  .collection-intro {
+    padding: 60px 20px 16px;
+  }
+  
+  .shelf {
+    padding: 56px 0 64px;
+    scroll-margin-top: 64px;
+  }
+  
+  .shelf-inner {
+    width: calc(100% - 40px);
+  }
+  
+  .shelf-header {
+    margin-bottom: 24px;
+  }
+  
+  .shelf-title {
+    font-size: 24px;
+  }
+  
+  .shelf-desc {
+    font-size: 13.5px;
+    line-height: 1.75;
+  }
+  
+  .book-card-wide {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+  }
+  
+  .book-card-wide .book-cover-wrap {
+    height: 270px;
+    padding: 16px;
+  }
+  
+  .book-card-wide .book-card-title {
+    font-size: 20px;
+  }
+  
+  .book-summary-text {
+    font-size: 13px;
+    line-height: 1.75;
+    margin-bottom: 14px;
+  }
+  
+  .series-upcoming-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shelf-inner {
+    width: calc(100% - 28px);
+  }
+  
+  .shelf-meta {
+    gap: 8px;
+  }
+  
+  .book-card-column .book-cover-wrap,
+  .book-card-wide .book-cover-wrap {
+    height: 240px;
+    padding: 14px;
+  }
+  
+  .book-btn-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .btn-pill {
+    justify-content: center;
+  }
 }
