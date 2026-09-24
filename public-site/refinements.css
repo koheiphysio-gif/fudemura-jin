@@ -824,67 +824,26 @@ footer { font-size: 12px; }
   line-height: 1.8;
   color: rgba(35, 48, 51, .8);
 }
-.work-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px 24px;
+.work-cta {
   padding: 36px;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 18px;
+  text-align: center;
 }
-.work-form__hp { position: absolute; left: -9999px; }
-.work-form__row { display: flex; flex-direction: column; gap: 8px; }
-.work-form__row--full,
-.work-form__note,
-.work-form__submit { grid-column: 1 / -1; }
-.work-form label {
-  font-size: 15px;
-  font-weight: 700;
+.work-cta__text {
+  max-width: 560px;
+  margin: 0 auto 24px;
+  font-size: 16px;
+  line-height: 1.9;
 }
-.work-form .req,
-.work-form .opt {
-  margin-left: 6px;
-  padding: 1px 7px;
-  border-radius: 4px;
-  font-size: 12px;
-  vertical-align: 1px;
-}
-.work-form .req { background: var(--rust); color: #fff; }
-.work-form .opt { border: 1px solid rgba(35, 48, 51, .3); color: rgba(35, 48, 51, .75); }
-.work-form input,
-.work-form select,
-.work-form textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1px solid rgba(35, 48, 51, .3);
-  border-radius: 8px;
-  background: #fff;
-  color: var(--ink);
-  font: inherit;
-  font-size: 16px; /* iOSのズーム防止も兼ねる */
-  line-height: 1.6;
-}
-.work-form textarea { resize: vertical; }
-.work-form input:focus-visible,
-.work-form select:focus-visible,
-.work-form textarea:focus-visible {
-  outline: 2px solid var(--rust);
-  outline-offset: 1px;
-  border-color: var(--rust);
-}
-.work-form__note {
-  margin: 0;
+.work-cta__button { padding: 18px 32px; font-size: 15px; }
+.work-cta__note {
+  max-width: 560px;
+  margin: 18px auto 0;
   font-size: 13px;
   line-height: 1.7;
   color: rgba(35, 48, 51, .75);
-}
-.work-form__submit {
-  justify-self: start;
-  border: 0;
-  cursor: pointer;
-  font-family: inherit;
-  padding: 16px 28px;
 }
 
 /* ==========================================================================
@@ -931,8 +890,8 @@ footer.site-footer {
   .work { padding: 64px 0 72px; }
   .work-inner { width: calc(100% - 40px); }
   .work-services { grid-template-columns: 1fr; gap: 12px; margin-bottom: 32px; }
-  .work-form { grid-template-columns: 1fr; padding: 22px 18px; }
-  .work-form__submit { justify-self: stretch; justify-content: center; }
+  .work-cta { padding: 26px 18px; }
+  .work-cta__button { display: flex; justify-content: center; }
   footer.site-footer { grid-template-columns: 1fr 1fr; padding: 36px 24px 28px; }
   .site-footer__brand { grid-column: 1 / -1; }
 }

@@ -472,38 +472,11 @@
             <p>専門的な内容を、読み手に伝わるマンガや図解に。施設・企業の案内や啓発用コンテンツもご相談ください。</p>
           </li>
         </ul>
-        <form class="work-form" name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact">
-          <p class="work-form__hp" aria-hidden="true"><label>この欄は空のままにしてください <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-          <div class="work-form__row">
-            <label for="f-name">お名前 <span class="req">必須</span></label>
-            <input id="f-name" name="name" type="text" autocomplete="name" required>
-          </div>
-          <div class="work-form__row">
-            <label for="f-org">会社名・所属 <span class="opt">任意</span></label>
-            <input id="f-org" name="organization" type="text" autocomplete="organization">
-          </div>
-          <div class="work-form__row">
-            <label for="f-email">メールアドレス <span class="req">必須</span></label>
-            <input id="f-email" name="email" type="email" autocomplete="email" required>
-          </div>
-          <div class="work-form__row">
-            <label for="f-type">ご依頼の種類 <span class="req">必須</span></label>
-            <select id="f-type" name="type" required>
-              <option value="">選択してください</option>
-              <option>医療・介護記事の執筆</option>
-              <option>医療記事の監修・ファクトチェック</option>
-              <option>マンガ・図解コンテンツ制作</option>
-              <option>その他のご相談</option>
-            </select>
-          </div>
-          <div class="work-form__row work-form__row--full">
-            <label for="f-message">ご依頼内容 <span class="req">必須</span></label>
-            <textarea id="f-message" name="message" rows="6" required placeholder="媒体・テーマ・文字数やページ数・ご希望の納期・ご予算など、分かる範囲でご記入ください。"></textarea>
-          </div>
-          <p class="work-form__note">お預かりした個人情報は、ご依頼への返信とお打ち合わせのためにのみ使用し、第三者に提供することはありません。</p>
-          <button class="button work-form__submit" type="submit">内容を送信する <span aria-hidden="true">→</span></button>
-        </form>
+        <div class="work-cta">
+          <p class="work-cta__text">ご依頼・ご相談は、下記のフォームからお送りください。内容を確認のうえ、ご入力のメールアドレスへ折り返しご連絡いたします。</p>
+          <a class="button work-cta__button" href="https://docs.google.com/forms/d/e/1FAIpQLSefnsJblzjEGwg2_oZEdZgu2RSJHfXVYMdrCsA61xe4VRJDbA/viewform" target="_blank" rel="noopener">依頼フォームを開く <span aria-hidden="true">↗</span></a>
+          <p class="work-cta__note">Googleフォームが別タブで開きます（所要時間 約3分）。お預かりした個人情報は、ご依頼への返信とお打ち合わせのためにのみ使用します。</p>
+        </div>
       </div>
     </section>
     <footer class="site-footer">
