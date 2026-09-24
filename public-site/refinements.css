@@ -675,3 +675,271 @@
     justify-content: center;
   }
 }
+
+/* ==========================================================================
+   読みやすさ改善（2026-09-24）
+   50代以上の読者を想定し、本文16px・補足12px以上、文字色はAA（4.5:1）以上に揃える
+   ========================================================================== */
+:root {
+  --rust: #9c4a2e;  /* 旧 #b85b3c（背景比4.16:1）→ 5.57:1 */
+  --leaf: #52685a;  /* 旧 #607764（背景比4.43:1）→ 5.48:1 */
+}
+
+/* 見出しは意味の切れ目（.nb）でのみ折り返す */
+.hero h1 { font-size: clamp(34px, 3.6vw, 56px); }
+.hero h1 .nb { display: inline-block; }
+
+/* ヘッダー・ヒーロー */
+.site-nav { font-size: 13px; }
+.kicker { font-size: 12px; }
+.hero-role { font-size: 14px; }
+.hero-lead { max-width: 480px; font-size: 17px; }
+.button { font-size: 14px; }
+.theme-link span { font-size: 12px; }
+
+/* 本棚 */
+.section-heading__note { font-size: 15px; }
+.shelf-number { font-size: 12px; }
+.shelf-category { font-size: 13px; color: rgba(35, 48, 51, .8); }
+.series-badge { font-size: 12px; }
+.shelf-desc { font-size: 16px; }
+.book-badge-meta { font-size: 12px; }
+.book-lead-text,
+.book-summary-text,
+.book-card-column .book-summary-text { font-size: 16px; }
+.book-card-column .series-step { font-size: 12px; }
+.rank-badge,
+.book-card-column .rank-badge { font-size: 13px; }
+.rank-badge strong,
+.book-card-column .rank-badge strong { font-size: 14px; }
+.rank-badge .rank-date {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  color: rgba(35, 48, 51, .75);
+}
+.btn-pill,
+.book-card-column .btn-pill { font-size: 14px; }
+.upcoming-badge span:first-child { font-size: 12px; }
+.upcoming-badge span:last-child { font-size: 14px; }
+.upcoming-title { font-size: 18px; }
+.upcoming-text { font-size: 16px; }
+
+/* 著者・物語・フッター */
+.author-role { font-size: 14px; }
+.author-bio { font-size: 16px; }
+.text-link { font-size: 14px; }
+.story-subtitle { font-size: 16px; }
+.story-caption { font-size: 14px; }
+footer { font-size: 12px; }
+
+@media (max-width: 780px) {
+  .site-nav { gap: 14px; font-size: 13px; }
+  .hero h1 { font-size: clamp(34px, 10vw, 52px); }
+  .hero-role { font-size: 13px; }
+  .hero-lead { font-size: 16px; }
+  .shelf-desc,
+  .book-summary-text,
+  .story-subtitle { font-size: 16px; }
+}
+
+/* ==========================================================================
+   新刊通知（Xフォロー導線）
+   ========================================================================== */
+.upcoming-follow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 18px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(82, 104, 90, .25);
+}
+.upcoming-follow p {
+  flex: 1 1 260px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+/* ==========================================================================
+   お仕事のご依頼
+   ========================================================================== */
+.work {
+  padding: 96px 0 104px;
+  background: var(--paper-deep);
+  scroll-margin-top: 0;
+}
+.work-inner {
+  width: min(1000px, calc(100% - 68px));
+  margin: 0 auto;
+}
+.work-header { margin-bottom: 40px; }
+.work-header h2 {
+  margin: 0;
+  font-family: Georgia, "Yu Mincho", serif;
+  font-size: clamp(29px, 3.4vw, 43px);
+  font-weight: 400;
+  letter-spacing: .05em;
+  line-height: 1.4;
+}
+.work-lead {
+  max-width: 640px;
+  margin: 14px 0 0;
+  font-size: 16px;
+  line-height: 1.9;
+  color: rgba(35, 48, 51, .82);
+}
+.work-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 0 0 48px;
+  padding: 0;
+  list-style: none;
+}
+.work-service {
+  padding: 24px 22px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.work-service__no {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  color: var(--rust);
+}
+.work-service h3 {
+  margin: 6px 0 10px;
+  font-family: Georgia, "Yu Mincho", serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.work-service p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(35, 48, 51, .8);
+}
+.work-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 24px;
+  padding: 36px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.work-form__hp { position: absolute; left: -9999px; }
+.work-form__row { display: flex; flex-direction: column; gap: 8px; }
+.work-form__row--full,
+.work-form__note,
+.work-form__submit { grid-column: 1 / -1; }
+.work-form label {
+  font-size: 15px;
+  font-weight: 700;
+}
+.work-form .req,
+.work-form .opt {
+  margin-left: 6px;
+  padding: 1px 7px;
+  border-radius: 4px;
+  font-size: 12px;
+  vertical-align: 1px;
+}
+.work-form .req { background: var(--rust); color: #fff; }
+.work-form .opt { border: 1px solid rgba(35, 48, 51, .3); color: rgba(35, 48, 51, .75); }
+.work-form input,
+.work-form select,
+.work-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(35, 48, 51, .3);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px; /* iOSのズーム防止も兼ねる */
+  line-height: 1.6;
+}
+.work-form textarea { resize: vertical; }
+.work-form input:focus-visible,
+.work-form select:focus-visible,
+.work-form textarea:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: 1px;
+  border-color: var(--rust);
+}
+.work-form__note {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(35, 48, 51, .75);
+}
+.work-form__submit {
+  justify-self: start;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 16px 28px;
+}
+
+/* ==========================================================================
+   フッター
+   ========================================================================== */
+footer.site-footer {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: start;
+  gap: 18px 48px;
+  padding: 44px 34px 36px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .04em;
+  color: rgba(35, 48, 51, .82);
+}
+.site-footer p { margin: 0; }
+.site-footer__name {
+  margin-bottom: 4px !important;
+  font-family: Georgia, "Yu Mincho", serif;
+  font-size: 20px;
+  letter-spacing: .12em;
+  color: var(--ink);
+}
+.site-footer__nav,
+.site-footer__sns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.site-footer a { text-decoration: none; }
+.site-footer a:hover,
+.site-footer a:focus-visible { color: var(--rust); text-decoration: underline; }
+.site-footer__copy {
+  grid-column: 1 / -1;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  letter-spacing: .12em;
+}
+
+@media (max-width: 780px) {
+  .site-nav { gap: 12px; }
+  .work { padding: 64px 0 72px; }
+  .work-inner { width: calc(100% - 40px); }
+  .work-services { grid-template-columns: 1fr; gap: 12px; margin-bottom: 32px; }
+  .work-form { grid-template-columns: 1fr; padding: 22px 18px; }
+  .work-form__submit { justify-self: stretch; justify-content: center; }
+  footer.site-footer { grid-template-columns: 1fr 1fr; padding: 36px 24px 28px; }
+  .site-footer__brand { grid-column: 1 / -1; }
+}
+
+.work-service h3 { text-wrap: balance; }
+@media (max-width: 390px) {
+  .site-header { padding: 0 16px; }
+  .site-brand { font-size: 17px; letter-spacing: .1em; }
+  .site-nav { gap: 10px; font-size: 12px; }
+}
