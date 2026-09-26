@@ -179,9 +179,10 @@
   ]
 }
   </script>
+  <link rel="preload" as="image" href="assets/manga/rehab-hero-b-1152.webp" imagesrcset="assets/manga/rehab-hero-b-768.webp 768w, assets/manga/rehab-hero-b-1152.webp 1152w, assets/manga/rehab-hero-b.webp 1536w" imagesizes="(max-width:760px) 100vw, 66vw" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <style>
     /* 配色は書影（ケーシーの青・老健の庭の緑）から取っている */
     :root{
@@ -193,7 +194,7 @@
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     [id]{scroll-margin-top:90px}
-    body{margin:0;color:var(--ink);background:var(--bg);font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;font-size:16px;line-height:1.9;letter-spacing:.03em}
+    body{margin:0;color:var(--ink);background:var(--bg);font-family:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.9;letter-spacing:.03em}
     img{max-width:100%;height:auto;display:block}
     a{color:inherit}
     .wrap{width:min(1120px,100%);margin:0 auto;padding:0 24px}
@@ -203,11 +204,11 @@
     .header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
     .header .wrap{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
     .logo{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
-    .logo-name{position:relative;font-family:"Zen Maru Gothic",sans-serif;font-weight:900;font-size:23px;letter-spacing:.14em;line-height:1;padding-bottom:6px}
+    .logo-name{position:relative;font-family:"Zen Maru Gothic",sans-serif;font-weight:700;font-size:23px;letter-spacing:.14em;line-height:1;padding-bottom:6px}
     .logo-name::after{content:"";position:absolute;left:0;right:.14em;bottom:0;height:3px;background:linear-gradient(90deg,var(--blue) 0 62%,var(--green) 62% 100%);border-radius:0}
     .logo-role{font-size:11px;color:var(--sub);letter-spacing:.08em;line-height:1.5;padding-left:14px;border-left:1px solid var(--line)}
     @media (max-width:560px){.logo-role{display:none}.logo-name{font-size:21px}}
-    .nav{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:500}
+    .nav{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:700}
     .nav a{text-decoration:none}
     .nav a:hover{color:var(--blue)}
     .nav .nav-cta{padding:9px 20px;border-radius:999px;background:var(--blue);color:#fff}
@@ -216,7 +217,7 @@
     /* ファーストビュー */
     .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--sky) 0%,#fff 100%)}
     .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:88px}
-    .hero-role{display:inline-block;margin:0 0 18px;padding:5px 14px;border-radius:999px;background:#fff;border:1px solid var(--sky-2);color:var(--blue-deep);font-size:13px;font-weight:500}
+    .hero-role{display:inline-block;margin:0 0 18px;padding:5px 14px;border-radius:999px;background:#fff;border:1px solid var(--sky-2);color:var(--blue-deep);font-size:13px;font-weight:700}
     .hero h1{margin:0;font-family:"Zen Maru Gothic",sans-serif;font-weight:700;font-size:clamp(28px,3.9vw,42px);line-height:1.5;letter-spacing:.06em}
     .hero h1 em{font-style:normal;color:var(--blue);background:linear-gradient(transparent 68%,#fbe3a6 68%)}
     .nb{display:inline-block}
@@ -289,7 +290,7 @@
     .card p{margin:0;color:var(--sub);font-size:14px;line-height:1.85}
     .rank{display:block;margin-top:10px;font-size:12px;line-height:1.6;color:var(--sub)}
     .rank .badge{margin:0 0 4px}
-    .rank-cat{display:block;color:var(--ink);font-weight:500}
+    .rank-cat{display:block;color:var(--ink);font-weight:700}
     .rank-date{display:block;font-size:11px}
     .card .rank{margin-top:14px;padding:12px 14px;border-radius:12px;background:#fffbef}
     .card-links{margin-top:auto;padding-top:18px;display:flex;flex-wrap:wrap;gap:8px}
@@ -304,7 +305,7 @@
     .about h2{margin:0;font-family:"Zen Maru Gothic",sans-serif;font-size:32px;letter-spacing:.1em}
     .about .ruby{margin:0 0 14px;color:var(--sub);font-size:13px}
     .tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
-    .tags li{padding:4px 14px;border-radius:999px;background:var(--sky);color:var(--blue-deep);font-size:13px;font-weight:500}
+    .tags li{padding:4px 14px;border-radius:999px;background:var(--sky);color:var(--blue-deep);font-size:13px;font-weight:700}
     .about p{margin:0 0 14px;font-size:15px}
     .timeline{list-style:none;margin:26px 0 0;padding:0;border-left:2px solid var(--sky-2)}
     .timeline li{position:relative;padding:0 0 12px 24px;font-size:14px}
@@ -413,7 +414,7 @@
     .themes{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:-20px 0 44px;padding:0;list-style:none}
     .themes a{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:999px;background:#fff;border:1.5px solid var(--line);font-size:14px;font-weight:700;text-decoration:none}
     .themes a:hover{border-color:var(--blue);color:var(--blue)}
-    .themes small{color:var(--sub);font-weight:500}
+    .themes small{color:var(--sub);font-weight:400}
 
 
     /* 老健シリーズ：説明を上段、3巻を下段に。各巻に紹介文とnoteリンクを戻す */
@@ -486,7 +487,7 @@
 
   <main id="top">
     <div class="hero">
-      <div class="hero-bg" aria-hidden="true"><img src="assets/manga/rehab-hero-b.webp" alt="" width="1536" height="1024"></div>
+      <div class="hero-bg" aria-hidden="true"><img src="assets/manga/rehab-hero-b-1152.webp" srcset="assets/manga/rehab-hero-b-768.webp 768w, assets/manga/rehab-hero-b-1152.webp 1152w, assets/manga/rehab-hero-b.webp 1536w" sizes="(max-width:760px) 100vw, 66vw" alt="" width="1536" height="1024" fetchpriority="high" decoding="async"></div>
       <div class="wrap">
         <div>
           <p class="hero-role bubble">老健で働く理学療法士が描いています</p>
@@ -539,7 +540,7 @@
           </div>
           <div class="series-covers">
             <article class="vol" id="book-03">
-              <a class="vol-cover" href="https://www.amazon.co.jp/dp/B0HB4DHCT2" target="_blank" rel="noopener noreferrer"><img src="assets/rouken-rehab-vol-1-cover.webp" alt="第1巻『さよならの前に』をAmazonで見る" width="600" height="900"></a>
+              <a class="vol-cover" href="https://www.amazon.co.jp/dp/B0HB4DHCT2" target="_blank" rel="noopener noreferrer"><img src="assets/rouken-rehab-vol-1-cover-400.webp" srcset="assets/rouken-rehab-vol-1-cover-400.webp 400w, assets/rouken-rehab-vol-1-cover.webp 600w" sizes="200px" loading="lazy" alt="第1巻『さよならの前に』をAmazonで見る" width="600" height="900"></a>
               <div class="vol-body">
                 <p class="vol-no">第1巻</p>
                 <h4>さよならの前に</h4>
@@ -549,7 +550,7 @@
               </div>
             </article>
             <article class="vol" id="book-04">
-              <a class="vol-cover" href="https://www.amazon.co.jp/dp/B0GX2Y47G5" target="_blank" rel="noopener noreferrer"><img src="assets/rouken-rehab-vol-2-cover.webp" alt="第2巻『思い出は消えても』をAmazonで見る" width="600" height="900"></a>
+              <a class="vol-cover" href="https://www.amazon.co.jp/dp/B0GX2Y47G5" target="_blank" rel="noopener noreferrer"><img src="assets/rouken-rehab-vol-2-cover-400.webp" srcset="assets/rouken-rehab-vol-2-cover-400.webp 400w, assets/rouken-rehab-vol-2-cover.webp 600w" sizes="200px" loading="lazy" alt="第2巻『思い出は消えても』をAmazonで見る" width="600" height="900"></a>
               <div class="vol-body">
                 <p class="vol-no">第2巻</p>
                 <h4>思い出は消えても</h4>
@@ -559,7 +560,7 @@
               </div>
             </article>
             <article class="vol" id="book-05">
-              <a class="vol-cover" href="https://www.amazon.co.jp/dp/B0HGMCLFGJ" target="_blank" rel="noopener noreferrer"><img src="assets/rouken-rehab-vol-3-cover.webp" alt="第3巻『もう一度、自分の足で』をAmazonで見る" width="600" height="900"></a>
+              <a class="vol-cover" href="https://www.amazon.co.jp/dp/B0HGMCLFGJ" target="_blank" rel="noopener noreferrer"><img src="assets/rouken-rehab-vol-3-cover-400.webp" srcset="assets/rouken-rehab-vol-3-cover-400.webp 400w, assets/rouken-rehab-vol-3-cover.webp 600w" sizes="200px" loading="lazy" alt="第3巻『もう一度、自分の足で』をAmazonで見る" width="600" height="900"></a>
               <div class="vol-body">
                 <p class="vol-no">第3巻</p>
                 <h4>もう一度、自分の足で</h4>
@@ -578,7 +579,7 @@
             <p>理学療法士の現場経験20年以上から生まれた、いつまでも動ける身体をつくる健康実用書シリーズです。</p>
           </div>
           <article class="card" id="book-06">
-            <a class="card-cover" href="https://amzn.asia/d/0d6n0rnt" target="_blank" rel="noopener noreferrer"><img src="assets/chair-exercise-cover.webp" alt="『50代からの椅子ひとつの体操』をAmazonで見る" width="600" height="900" loading="lazy"></a>
+            <a class="card-cover" href="https://amzn.asia/d/0d6n0rnt" target="_blank" rel="noopener noreferrer"><img src="assets/chair-exercise-cover-400.webp" srcset="assets/chair-exercise-cover-400.webp 400w, assets/chair-exercise-cover.webp 600w" sizes="200px" alt="『50代からの椅子ひとつの体操』をAmazonで見る" width="600" height="900" loading="lazy"></a>
             <div class="card-body">
               <h3>50代からの椅子ひとつの体操</h3>
               <p>一日5分、器具なし。立ち上がりや階段がつらくなってきた方に、椅子ひとつで始められる体操をマンガと図解で紹介します。</p>
@@ -596,7 +597,7 @@
             <p>休職から復職への道のりと、自分を大切にするための考え方を綴ったエッセイ漫画です。</p>
           </div>
           <article class="card" id="book-02">
-            <a class="card-cover" href="https://www.amazon.co.jp/dp/B0H2NMP3Q4" target="_blank" rel="noopener noreferrer"><img src="assets/rework-priority-cover.webp" alt="『うつ休職から復職できた妻の話』をAmazonで見る" width="600" height="849" loading="lazy"></a>
+            <a class="card-cover" href="https://www.amazon.co.jp/dp/B0H2NMP3Q4" target="_blank" rel="noopener noreferrer"><img src="assets/rework-priority-cover-400.webp" srcset="assets/rework-priority-cover-400.webp 400w, assets/rework-priority-cover.webp 600w" sizes="200px" alt="『うつ休職から復職できた妻の話』をAmazonで見る" width="600" height="849" loading="lazy"></a>
             <div class="card-body">
               <h3>うつ休職から復職できた妻の話</h3>
               <p>休職から復職まで、そばで見守った夫婦の記録です。回復のきっかけになったリワーク（復職支援プログラム）で教わった考え方を描きました。</p>
@@ -612,7 +613,7 @@
             <p>夜勤や臨床現場の経験を、場所に縛られない新しい仕事へつなげる実践ガイドです。</p>
           </div>
           <article class="card" id="book-01">
-            <a class="card-cover" href="https://www.amazon.co.jp/dp/B0GMWK2D5L" target="_blank" rel="noopener noreferrer"><img src="assets/nurse-webwriter-cover.webp" alt="『看護師の在宅医療Webライター副業の始め方』をAmazonで見る" width="600" height="849" loading="lazy"></a>
+            <a class="card-cover" href="https://www.amazon.co.jp/dp/B0GMWK2D5L" target="_blank" rel="noopener noreferrer"><img src="assets/nurse-webwriter-cover-400.webp" srcset="assets/nurse-webwriter-cover-400.webp 400w, assets/nurse-webwriter-cover.webp 600w" sizes="200px" alt="『看護師の在宅医療Webライター副業の始め方』をAmazonで見る" width="600" height="849" loading="lazy"></a>
             <div class="card-body">
               <h3>看護師の在宅医療Webライター副業の始め方</h3>
               <p>夜勤や不規則な勤務で身につけた専門知識を、在宅でできるWebライターの仕事にどう生かすか。自分でやってきたことをもとに解説します。</p>
