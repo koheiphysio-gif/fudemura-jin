@@ -263,7 +263,8 @@
 
     /* お知らせ帯 */
     .news{border-bottom:1px solid var(--line)}
-    .news .wrap{display:flex;align-items:center;gap:20px;padding-top:18px;padding-bottom:18px;font-size:14px}
+    .news .wrap{display:flex;flex-direction:column;gap:10px;padding-top:18px;padding-bottom:18px;font-size:14px}
+    .news-item{display:flex;align-items:center;gap:20px;margin:0}
     .news-tag{flex-shrink:0;padding:3px 12px;border-radius:6px;background:var(--green);color:#fff;font-size:12px;font-weight:700}
     .news time{color:var(--sub);flex-shrink:0}
     .news a{text-decoration:none}
@@ -469,7 +470,7 @@
       .hero .wrap,.about .wrap,.story .wrap{grid-template-columns:1fr;gap:40px}
       .hero .wrap{padding-top:44px;padding-bottom:64px}
       .hero-note{left:12px;bottom:-18px}
-      .news .wrap{flex-wrap:wrap;gap:8px 14px}
+      .news-item{flex-wrap:wrap;gap:8px 14px}
       section{padding:72px 0}
       .facts ul,.book-list,.services{grid-template-columns:1fr}
       .series{grid-template-columns:1fr;padding:28px 20px;gap:28px}
@@ -520,9 +521,16 @@
 
     <div class="news">
       <div class="wrap">
-        <span class="news-tag">新刊</span>
-        <time datetime="2026-09">2026.09</time>
-        <a href="#book-06">『50代からの椅子ひとつの体操』がKindleストアの介護・老年医学・リハビリテーション医学の3部門で1位になりました（9月15日時点）</a>
+        <p class="news-item">
+          <span class="news-tag">新刊</span>
+          <time datetime="2026-10">2026.10</time>
+          <a href="#book-07">『50代からの 10分から始めるウォーキング』がKindleストアのリハビリテーション医学・整形外科学・老年医学の3部門で1位になりました（10月8日時点）</a>
+        </p>
+        <p class="news-item">
+          <span class="news-tag">新刊</span>
+          <time datetime="2026-09">2026.09</time>
+          <a href="#book-06">『50代からの椅子ひとつの体操』がKindleストアの介護・老年医学・リハビリテーション医学の3部門で1位になりました（9月15日時点）</a>
+        </p>
       </div>
     </div>
 
@@ -531,7 +539,7 @@
         <ul>
           <li><span class="num">20<small>年以上</small></span><span class="label">理学療法士としての臨床</span><span class="desc">介護老人保健施設で、高齢者のリハビリに携わっています</span></li>
           <li><span class="num">7<small>冊</small></span><span class="label">Kindleでの出版</span><span class="desc">マンガ作品と実用書。からだ塾シリーズ第2作を刊行</span></li>
-          <li><span class="num">4<small>冊</small></span><span class="label">部門別1位を獲得</span><span class="desc">Kindleストアのリハビリテーション医学・老年医学・介護・整形外科学（2026年7〜9月）</span></li>
+          <li><span class="num">5<small>冊</small></span><span class="label">部門別1位を獲得</span><span class="desc">Kindleストアのリハビリテーション医学・老年医学・介護・整形外科学（2026年7〜10月）</span></li>
         </ul>
       </div>
     </section>
@@ -611,6 +619,7 @@
               <p class="vol-no">第2作・新刊</p>
               <h3>50代からの 10分から始めるウォーキング</h3>
               <p>運動が苦手な人のための、通勤や買い物にプラス10分から始める歩く習慣。椅子体操で土台をつくった真由美が、日常の歩く時間を無理なく増やしていく8週間をマンガと図解で描きます。</p>
+              <span class="rank"><em class="badge">3部門で1位</em><span class="rank-cat">リハビリテーション医学・整形外科学・老年医学</span><span class="rank-date">2026年10月8日時点・Amazon Kindleストア</span></span>
               <div class="card-links"><a class="chip chip-main" href="https://amzn.asia/d/05XnlY5r" target="_blank" rel="noopener noreferrer">Amazonで見る</a><a class="chip" href="https://fudemura-walking-10min.pages.dev/" target="_blank" rel="noopener noreferrer">特設ページを見る</a></div>
             </div>
           </article>
