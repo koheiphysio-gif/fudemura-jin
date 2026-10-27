@@ -63,6 +63,15 @@
       "inLanguage": "ja"
     },
     {
+      "@type": "BookSeries",
+      "@id": "https://fudemura-jin.netlify.app/#series-karada",
+      "name": "50代からのからだ塾",
+      "author": {
+        "@id": "https://fudemura-jin.netlify.app/#person"
+      },
+      "inLanguage": "ja"
+    },
+    {
       "@type": "Book",
       "@id": "https://fudemura-jin.netlify.app/#book-01",
       "name": "看護師の在宅医療Webライター副業の始め方: 夜勤16時間vs在宅4時間どちらを選ぶ？専門知識と経験を活かせるタイパ最強副業",
@@ -192,6 +201,27 @@
         "propertyID": "ASIN",
         "value": "B0HLPT5HKY"
       }
+    },
+    {
+      "@type": "Book",
+      "@id": "https://fudemura-jin.netlify.app/#book-08",
+      "name": "50代からの 座りっぱなし対策: 運動の時間を別に作らず、仕事の合間に姿勢を変える【マンガ＋図解】",
+      "author": {
+        "@id": "https://fudemura-jin.netlify.app/#person"
+      },
+      "inLanguage": "ja",
+      "bookFormat": "https://schema.org/EBook",
+      "image": "https://fudemura-jin.netlify.app/assets/sitting-break-cover.webp",
+      "url": "https://www.amazon.co.jp/dp/B0GX2YSLHX",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ASIN",
+        "value": "B0GX2YSLHX"
+      },
+      "isPartOf": {
+        "@id": "https://fudemura-jin.netlify.app/#series-karada"
+      },
+      "position": "3"
     }
   ]
 }
@@ -458,6 +488,7 @@
     .theme .card-cover img{height:auto;width:140px}
     .theme .card-body{padding:24px 28px}
     .theme .card .rank{max-width:520px}
+    .karada-books{display:grid;gap:16px}
     #karada .card-cover{background:var(--sky)}
     #kokoro .card-cover{background:#f7eef2}
     #hataraki .card-cover{background:var(--green-soft)}
@@ -524,6 +555,11 @@
         <p class="news-item">
           <span class="news-tag">新刊</span>
           <time datetime="2026-10">2026.10</time>
+          <a href="https://fudemura-suwarippanashi.pages.dev/">『50代からの 座りっぱなし対策』を発売しました。仕事の合間に姿勢を変える方法をマンガと図解で紹介します</a>
+        </p>
+        <p class="news-item">
+          <span class="news-tag">新刊</span>
+          <time datetime="2026-10">2026.10</time>
           <a href="#book-07">『50代からの 10分から始めるウォーキング』がKindleストアのリハビリテーション医学・整形外科学・老年医学の3部門で1位になりました（10月8日時点）</a>
         </p>
         <p class="news-item">
@@ -538,7 +574,7 @@
       <div class="wrap">
         <ul>
           <li><span class="num">20<small>年以上</small></span><span class="label">理学療法士としての臨床</span><span class="desc">介護老人保健施設で、高齢者のリハビリに携わっています</span></li>
-          <li><span class="num">7<small>冊</small></span><span class="label">Kindleでの出版</span><span class="desc">マンガ作品と実用書。からだ塾シリーズ第2作を刊行</span></li>
+          <li><span class="num">8<small>冊</small></span><span class="label">Kindleでの出版</span><span class="desc">マンガ作品と実用書。からだ塾シリーズ第3作を刊行</span></li>
           <li><span class="num">5<small>冊</small></span><span class="label">部門別1位を獲得</span><span class="desc">Kindleストアのリハビリテーション医学・老年医学・介護・整形外科学（2026年7〜10月）</span></li>
         </ul>
       </div>
@@ -548,11 +584,11 @@
       <div class="wrap">
         <div class="sec-head">
           <h2>本の紹介</h2>
-          <p>介護とリハビリ、からだ、心と暮らし、働き方。4つのテーマで7冊を書いています。</p>
+          <p>介護とリハビリ、からだ、心と暮らし、働き方。4つのテーマで8冊を書いています。</p>
         </div>
         <ul class="themes">
           <li><a href="#series">介護とリハビリ <small>3冊</small></a></li>
-          <li><a href="#karada">からだ <small>2冊</small></a></li>
+          <li><a href="#karada">からだ <small>3冊</small></a></li>
           <li><a href="#kokoro">心と暮らし <small>1冊</small></a></li>
           <li><a href="#hataraki">働き方 <small>1冊</small></a></li>
         </ul>
@@ -603,6 +639,7 @@
             <h3>50代からのからだ塾</h3>
             <p>理学療法士の現場経験20年以上から生まれた、いつまでも動ける身体をつくる健康実用書シリーズです。</p>
           </div>
+          <div class="karada-books">
           <article class="card" id="book-06">
             <a class="card-cover" href="https://amzn.asia/d/0d6n0rnt" target="_blank" rel="noopener noreferrer"><img src="assets/chair-exercise-cover-400.webp" srcset="assets/chair-exercise-cover-400.webp 400w, assets/chair-exercise-cover.webp 600w" sizes="200px" alt="『50代からの椅子ひとつの体操』をAmazonで見る" width="600" height="900" loading="lazy"></a>
             <div class="card-body">
@@ -623,7 +660,16 @@
               <div class="card-links"><a class="chip chip-main" href="https://amzn.asia/d/05XnlY5r" target="_blank" rel="noopener noreferrer">Amazonで見る</a><a class="chip" href="https://fudemura-walking-10min.pages.dev/" target="_blank" rel="noopener noreferrer">特設ページを見る</a></div>
             </div>
           </article>
-            <div class="upcoming"><span class="upcoming-tag">続刊準備中</span><p>膝や腰のセルフケア、日常の姿勢など、年齢を重ねても快適に動ける身体づくりをテーマに、シリーズを順次お届けします。新刊の発売日やセール情報は、Xでいち早くお知らせしています。</p><a class="chip" href="https://x.com/fudemura_ai" target="_blank" rel="noopener noreferrer">Xで新刊情報を受け取る</a></div>
+          <article class="card" id="book-08">
+            <a class="card-cover" href="https://www.amazon.co.jp/dp/B0GX2YSLHX" target="_blank" rel="noopener noreferrer"><img src="https://fudemura-suwarippanashi.pages.dev/assets/cover.jpg" alt="『50代からの 座りっぱなし対策』をAmazonで見る" width="600" height="900" loading="lazy"></a>
+            <div class="card-body">
+              <p class="vol-no">第3作・新刊</p>
+              <h3>50代からの 座りっぱなし対策</h3>
+              <p>運動の時間を別に作らず、仕事の合間に姿勢を変える。座っている時間を数えるところから、仕事の区切りで立つ工夫、座る・立つを組み合わせる方法まで、真由美の8週間をマンガと図解で紹介します。</p>
+              <div class="card-links"><a class="chip chip-main" href="https://www.amazon.co.jp/dp/B0GX2YSLHX" target="_blank" rel="noopener noreferrer">Amazonで見る</a><a class="chip" href="https://fudemura-suwarippanashi.pages.dev/" target="_blank" rel="noopener noreferrer">特設ページを見る</a></div>
+            </div>
+          </article>
+          </div>
         </div>
 
         <div class="series theme" id="kokoro">
