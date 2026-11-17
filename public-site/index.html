@@ -239,6 +239,23 @@
         "propertyID": "ASIN",
         "value": "B0HPZ82GXD"
       }
+    },
+    {
+      "@type": "Book",
+      "@id": "https://fudemura-jin.netlify.app/#book-10",
+      "name": "遠距離介護を ひとりで抱えない本: 親の連絡係を、紙に書き出して きょうだいと分け直す",
+      "author": {
+        "@id": "https://fudemura-jin.netlify.app/#person"
+      },
+      "inLanguage": "ja",
+      "bookFormat": "https://schema.org/EBook",
+      "image": "https://fudemura-jin.netlify.app/assets/family-care-cover.webp",
+      "url": "https://www.amazon.co.jp/dp/B0HRS5JV4X",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ASIN",
+        "value": "B0HRS5JV4X"
+      }
     }
   ]
 }
@@ -508,6 +525,7 @@
     .karada-books{display:grid;gap:16px}
     #karada .card-cover{background:var(--sky)}
     #kokoro .card-cover{background:#f7eef2}
+    #kazoku .card-cover{background:#fbf0e6}
     #hataraki .card-cover{background:var(--green-soft)}
     .upcoming{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;padding:18px 22px;border-radius:16px;background:var(--bg-2)}
     .upcoming-tag{padding:3px 12px;border-radius:999px;background:var(--green);color:#fff;font-size:12px;font-weight:700}
@@ -572,6 +590,11 @@
         <p class="news-item">
           <span class="news-tag">新刊</span>
           <time datetime="2026-11">2026.11</time>
+          <a href="https://www.amazon.co.jp/dp/B0HRS5JV4X" target="_blank" rel="noopener noreferrer">『遠距離介護を ひとりで抱えない本』を発売しました。親の連絡係を紙に書き出して、きょうだいと分け直すまでを描いた実用マンガです</a>
+        </p>
+        <p class="news-item">
+          <span class="news-tag">新刊</span>
+          <time datetime="2026-11">2026.11</time>
           <a href="https://fudemura-ai-makaseru.pages.dev/">『マンガでわかる AIに「任せる」入門』を発売しました。メールと予定をAIに任せていく実践マンガです</a>
         </p>
         <p class="news-item">
@@ -606,12 +629,13 @@
       <div class="wrap">
         <div class="sec-head">
           <h2>本の紹介</h2>
-          <p>介護とリハビリ、からだ、心と暮らし、働き方。4つのテーマで9冊を書いています。</p>
+          <p>介護とリハビリ、からだ、心と暮らし、働き方。5つのテーマで10冊を書いています。</p>
         </div>
         <ul class="themes">
           <li><a href="#series">介護とリハビリ <small>3冊</small></a></li>
           <li><a href="#karada">からだ <small>3冊</small></a></li>
           <li><a href="#kokoro">心と暮らし <small>1冊</small></a></li>
+          <li><a href="#kazoku">家族介護 <small>1冊</small></a></li>
           <li><a href="#hataraki">働き方 <small>2冊</small></a></li>
         </ul>
 
@@ -710,6 +734,23 @@
           </article>
         </div>
 
+        <div class="series theme" id="kazoku">
+          <div>
+            <span class="series-label">家族介護・実用マンガ</span>
+            <h3>マンガでわかる 家族介護</h3>
+            <p>離れて暮らす親の介護で、連絡や手続きを一人で引き受けている方に向けた実用マンガのシリーズです。</p>
+          </div>
+          <article class="card" id="book-10">
+            <a class="card-cover" href="https://www.amazon.co.jp/dp/B0HRS5JV4X" target="_blank" rel="noopener noreferrer"><img src="assets/family-care-cover-400.webp" srcset="assets/family-care-cover-400.webp 400w, assets/family-care-cover.webp 600w" sizes="200px" alt="『遠距離介護を ひとりで抱えない本』をAmazonで見る" width="600" height="900" loading="lazy"></a>
+            <div class="card-body">
+              <p class="vol-no">第1巻・新刊</p>
+              <h3>遠距離介護を ひとりで抱えない本</h3>
+              <p>電車で2時間の距離に住む父の連絡係を、一人で担ってきた会社員の美和。親のことを「項目・誰が・いつ」の紙に書き出し、きょうだいと役割を分け直していくまでを、マンガと解説ページで描きます。</p>
+              <div class="card-links"><a class="chip chip-main" href="https://www.amazon.co.jp/dp/B0HRS5JV4X" target="_blank" rel="noopener noreferrer">Amazonで見る</a><a class="chip" href="https://fudemura-enkyori-kaigo.pages.dev/" target="_blank" rel="noopener noreferrer">特設サイトでみる</a></div>
+            </div>
+          </article>
+        </div>
+
         <div class="series theme" id="hataraki">
           <div>
             <span class="series-label">働き方・実践ガイド</span>
@@ -750,7 +791,7 @@
           <ul class="timeline">
             <li><b>2004年</b>理学療法士として老健で勤務を始める</li>
             <li><b>2021年</b>副業でWebライター・ディレクターを始める</li>
-            <li><b>2026年</b>Kindleで1冊目を出版。11月までに9冊</li>
+            <li><b>2026年</b>Kindleで1冊目を出版。11月までに10冊</li>
           </ul>
           <div class="hero-btns" style="margin-top:24px">
             <a class="chip" href="https://note.com/ripe_dove7169" target="_blank" rel="noopener noreferrer">note</a>
